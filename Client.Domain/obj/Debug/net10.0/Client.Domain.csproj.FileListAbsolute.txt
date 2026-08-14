@@ -1,0 +1,11 @@
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Domain\bin\Debug\net10.0\Client.Domain.deps.json
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Domain\bin\Debug\net10.0\Client.Domain.dll
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Domain\bin\Debug\net10.0\Client.Domain.pdb
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Domain\obj\Debug\net10.0\Client.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Domain\obj\Debug\net10.0\Client.Domain.AssemblyInfoInputs.cache
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Domain\obj\Debug\net10.0\Client.Domain.AssemblyInfo.cs
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Domain\obj\Debug\net10.0\Client.Domain.csproj.CoreCompileInputs.cache
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Domain\obj\Debug\net10.0\Client.Domain.dll
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Domain\obj\Debug\net10.0\refint\Client.Domain.dll
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Domain\obj\Debug\net10.0\Client.Domain.pdb
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Domain\obj\Debug\net10.0\ref\Client.Domain.dll

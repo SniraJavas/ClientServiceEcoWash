@@ -1,0 +1,17 @@
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Infrastructure\bin\Debug\net10.0\Client.Infrastructure.deps.json
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Infrastructure\bin\Debug\net10.0\Client.Infrastructure.dll
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Infrastructure\bin\Debug\net10.0\Client.Infrastructure.pdb
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Infrastructure\bin\Debug\net10.0\Client.Application.dll
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Infrastructure\bin\Debug\net10.0\Client.Domain.dll
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Infrastructure\bin\Debug\net10.0\Client.Application.pdb
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Infrastructure\bin\Debug\net10.0\Client.Domain.pdb
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Infrastructure\obj\Debug\net10.0\Client.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Infrastructure\obj\Debug\net10.0\Client.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Infrastructure\obj\Debug\net10.0\Client.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Infrastructure\obj\Debug\net10.0\Client.Infrastructure.AssemblyInfo.cs
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Infrastructure\obj\Debug\net10.0\Client.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Infrastructure\obj\Debug\net10.0\Client.I.13AD723A.Up2Date
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Infrastructure\obj\Debug\net10.0\Client.Infrastructure.dll
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Infrastructure\obj\Debug\net10.0\refint\Client.Infrastructure.dll
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Infrastructure\obj\Debug\net10.0\Client.Infrastructure.pdb
+C:\Users\simam\source\repos\ClientServiceEcoWash\Client.Infrastructure\obj\Debug\net10.0\ref\Client.Infrastructure.dll

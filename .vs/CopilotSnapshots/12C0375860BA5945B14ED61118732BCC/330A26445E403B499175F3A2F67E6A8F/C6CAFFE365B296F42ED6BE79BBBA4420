@@ -1,0 +1,6 @@
+﻿namespace Client.Infrastructure.Repositories
+{
+    public async Task<Client.Domain.Entities.Client?> GetByIdentitySubjectAsync(Guid identitySubjectId, CancellationToken ct) =>
+      await _db.Clients.Include(c => c.Vehicles)
+          .FirstOrDefaultAsync(c => c.IdentitySubjectId == identitySubjectId, ct);
+}

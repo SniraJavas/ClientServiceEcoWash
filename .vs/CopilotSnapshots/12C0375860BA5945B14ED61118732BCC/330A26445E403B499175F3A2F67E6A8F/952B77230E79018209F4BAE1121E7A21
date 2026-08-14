@@ -1,0 +1,31 @@
+﻿using Client.Application.Interfaces;
+using Client.Domain.Rules;
+using Client.Domain.ValueObject;
+using MediatR;
+
+namespace Client.Application.Commands
+{
+    public record RegisterClientCommand(Guid IdentitySubjectId, string FullName, Email Email, PhoneNumber Phone) : IRequest<Guid>;
+
+    public class RegisterClientHandler : MediatR.IRequestHandler<RegisterClientCommand, Guid>
+    {
+        private readonly IClientRepository _clients;
+        private readonly IEventPublisher _events;
+
+        public async Task<Guid> Handle(RegisterClientCommand cmd, CancellationToken ct)
+        {
+            var existing = await _clients.GetByIdentitySubjectAsync(cmd.IdentitySubjectId, ct);
+            if (existing is not null)
+                throw new DomainException("A client profile already exists for this account.");
+
+            var client = Client.Domain.Entities.Client.Register(cmd.FullName, cmd.Email, cmd.Phone, cmd.IdentitySubjectId);
+            await _clients.SaveAsync(client, ct);
+
+            await _events.PublishAsync(
+                new ClientRegisteredEvent(client.Id, cmd.IdentitySubjectId, cmd.Email), ct);
+
+            return client.Id;
+        }
+    }
+
+}

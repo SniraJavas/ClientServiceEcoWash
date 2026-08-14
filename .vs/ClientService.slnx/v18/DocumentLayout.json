@@ -1,0 +1,638 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{61FE5E33-85D7-4348-AB7E-7CF24175F61B}|Client.Infrastructure\\Client.Infrastructure.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.infrastructure\\messaging\\rabbitmqeventpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61FE5E33-85D7-4348-AB7E-7CF24175F61B}|Client.Infrastructure\\Client.Infrastructure.csproj|solutionrelative:client.infrastructure\\messaging\\rabbitmqeventpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5ABCDD4-B0C4-4AC8-904D-7B8832B6137F}|Client.Domain\\Client.Domain.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.domain\\rules\\domainexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5ABCDD4-B0C4-4AC8-904D-7B8832B6137F}|Client.Domain\\Client.Domain.csproj|solutionrelative:client.domain\\rules\\domainexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52C34ABA-2E93-4E77-AD41-BB4158012494}|Client.Api\\Client.Api.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52C34ABA-2E93-4E77-AD41-BB4158012494}|Client.Api\\Client.Api.csproj|solutionrelative:client.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C40F351F-5B25-4582-85CE-F6C3DCBCFD2F}|Client.Application\\Client.Application.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.application\\interfaces\\iclientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C40F351F-5B25-4582-85CE-F6C3DCBCFD2F}|Client.Application\\Client.Application.csproj|solutionrelative:client.application\\interfaces\\iclientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61FE5E33-85D7-4348-AB7E-7CF24175F61B}|Client.Infrastructure\\Client.Infrastructure.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.infrastructure\\interfaces\\iclientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61FE5E33-85D7-4348-AB7E-7CF24175F61B}|Client.Infrastructure\\Client.Infrastructure.csproj|solutionrelative:client.infrastructure\\interfaces\\iclientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61FE5E33-85D7-4348-AB7E-7CF24175F61B}|Client.Infrastructure\\Client.Infrastructure.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.infrastructure\\repositories\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61FE5E33-85D7-4348-AB7E-7CF24175F61B}|Client.Infrastructure\\Client.Infrastructure.csproj|solutionrelative:client.infrastructure\\repositories\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C40F351F-5B25-4582-85CE-F6C3DCBCFD2F}|Client.Application\\Client.Application.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.application\\interfaces\\ieventpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C40F351F-5B25-4582-85CE-F6C3DCBCFD2F}|Client.Application\\Client.Application.csproj|solutionrelative:client.application\\interfaces\\ieventpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52C34ABA-2E93-4E77-AD41-BB4158012494}|Client.Api\\Client.Api.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.api\\contracts\\registerclientbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52C34ABA-2E93-4E77-AD41-BB4158012494}|Client.Api\\Client.Api.csproj|solutionrelative:client.api\\contracts\\registerclientbody.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52C34ABA-2E93-4E77-AD41-BB4158012494}|Client.Api\\Client.Api.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.api\\controllers\\clientregistrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52C34ABA-2E93-4E77-AD41-BB4158012494}|Client.Api\\Client.Api.csproj|solutionrelative:client.api\\controllers\\clientregistrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5ABCDD4-B0C4-4AC8-904D-7B8832B6137F}|Client.Domain\\Client.Domain.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.domain\\valueobject\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5ABCDD4-B0C4-4AC8-904D-7B8832B6137F}|Client.Domain\\Client.Domain.csproj|solutionrelative:client.domain\\valueobject\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5ABCDD4-B0C4-4AC8-904D-7B8832B6137F}|Client.Domain\\Client.Domain.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.domain\\valueobject\\phonenumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5ABCDD4-B0C4-4AC8-904D-7B8832B6137F}|Client.Domain\\Client.Domain.csproj|solutionrelative:client.domain\\valueobject\\phonenumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C40F351F-5B25-4582-85CE-F6C3DCBCFD2F}|Client.Application\\Client.Application.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.application\\commands\\registerclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C40F351F-5B25-4582-85CE-F6C3DCBCFD2F}|Client.Application\\Client.Application.csproj|solutionrelative:client.application\\commands\\registerclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C40F351F-5B25-4582-85CE-F6C3DCBCFD2F}|Client.Application\\Client.Application.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.application\\commands\\clientregisteredevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C40F351F-5B25-4582-85CE-F6C3DCBCFD2F}|Client.Application\\Client.Application.csproj|solutionrelative:client.application\\commands\\clientregisteredevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52C34ABA-2E93-4E77-AD41-BB4158012494}|Client.Api\\Client.Api.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.api\\extension\\claimsprincipalextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52C34ABA-2E93-4E77-AD41-BB4158012494}|Client.Api\\Client.Api.csproj|solutionrelative:client.api\\extension\\claimsprincipalextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61FE5E33-85D7-4348-AB7E-7CF24175F61B}|Client.Infrastructure\\Client.Infrastructure.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.infrastructure\\data\\clientdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61FE5E33-85D7-4348-AB7E-7CF24175F61B}|Client.Infrastructure\\Client.Infrastructure.csproj|solutionrelative:client.infrastructure\\data\\clientdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61FE5E33-85D7-4348-AB7E-7CF24175F61B}|Client.Infrastructure\\Client.Infrastructure.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.infrastructure\\client.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{61FE5E33-85D7-4348-AB7E-7CF24175F61B}|Client.Infrastructure\\Client.Infrastructure.csproj|solutionrelative:client.infrastructure\\client.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C40F351F-5B25-4582-85CE-F6C3DCBCFD2F}|Client.Application\\Client.Application.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.application\\client.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C40F351F-5B25-4582-85CE-F6C3DCBCFD2F}|Client.Application\\Client.Application.csproj|solutionrelative:client.application\\client.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5ABCDD4-B0C4-4AC8-904D-7B8832B6137F}|Client.Domain\\Client.Domain.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.domain\\client.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A5ABCDD4-B0C4-4AC8-904D-7B8832B6137F}|Client.Domain\\Client.Domain.csproj|solutionrelative:client.domain\\client.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5ABCDD4-B0C4-4AC8-904D-7B8832B6137F}|Client.Domain\\Client.Domain.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.domain\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5ABCDD4-B0C4-4AC8-904D-7B8832B6137F}|Client.Domain\\Client.Domain.csproj|solutionrelative:client.domain\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C40F351F-5B25-4582-85CE-F6C3DCBCFD2F}|Client.Application\\Client.Application.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.application\\interfaces\\irequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C40F351F-5B25-4582-85CE-F6C3DCBCFD2F}|Client.Application\\Client.Application.csproj|solutionrelative:client.application\\interfaces\\irequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5ABCDD4-B0C4-4AC8-904D-7B8832B6137F}|Client.Domain\\Client.Domain.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.domain\\entities\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5ABCDD4-B0C4-4AC8-904D-7B8832B6137F}|Client.Domain\\Client.Domain.csproj|solutionrelative:client.domain\\entities\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52C34ABA-2E93-4E77-AD41-BB4158012494}|Client.Api\\Client.Api.csproj|c:\\users\\simam\\source\\repos\\clientserviceecowash\\client.api\\client.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{52C34ABA-2E93-4E77-AD41-BB4158012494}|Client.Api\\Client.Api.csproj|solutionrelative:client.api\\client.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Client.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Api\\Program.cs",
+              "RelativeToolTip": "Client.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T07:57:01.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RabbitMqEventPublisher.cs",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Infrastructure\\Messaging\\RabbitMqEventPublisher.cs",
+              "RelativeDocumentMoniker": "Client.Infrastructure\\Messaging\\RabbitMqEventPublisher.cs",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Infrastructure\\Messaging\\RabbitMqEventPublisher.cs",
+              "RelativeToolTip": "Client.Infrastructure\\Messaging\\RabbitMqEventPublisher.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAEwBoAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T06:24:13.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RegisterClientBody.cs",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Api\\Contracts\\RegisterClientBody.cs",
+              "RelativeDocumentMoniker": "Client.Api\\Contracts\\RegisterClientBody.cs",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Api\\Contracts\\RegisterClientBody.cs",
+              "RelativeToolTip": "Client.Api\\Contracts\\RegisterClientBody.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T05:33:21.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ClientRegistrationController.cs",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Api\\Controllers\\ClientRegistrationController.cs",
+              "RelativeDocumentMoniker": "Client.Api\\Controllers\\ClientRegistrationController.cs",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Api\\Controllers\\ClientRegistrationController.cs",
+              "RelativeToolTip": "Client.Api\\Controllers\\ClientRegistrationController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAmwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T05:29:07.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IEventPublisher.cs",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Application\\Interfaces\\IEventPublisher.cs",
+              "RelativeDocumentMoniker": "Client.Application\\Interfaces\\IEventPublisher.cs",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Application\\Interfaces\\IEventPublisher.cs",
+              "RelativeToolTip": "Client.Application\\Interfaces\\IEventPublisher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T03:24:59.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IClientRepository.cs",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Application\\Interfaces\\IClientRepository.cs",
+              "RelativeDocumentMoniker": "Client.Application\\Interfaces\\IClientRepository.cs",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Application\\Interfaces\\IClientRepository.cs",
+              "RelativeToolTip": "Client.Application\\Interfaces\\IClientRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T03:25:59.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DomainException.cs",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Domain\\Rules\\DomainException.cs",
+              "RelativeDocumentMoniker": "Client.Domain\\Rules\\DomainException.cs",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Domain\\Rules\\DomainException.cs",
+              "RelativeToolTip": "Client.Domain\\Rules\\DomainException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T02:44:08.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Email.cs",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Domain\\ValueObject\\Email.cs",
+              "RelativeDocumentMoniker": "Client.Domain\\ValueObject\\Email.cs",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Domain\\ValueObject\\Email.cs",
+              "RelativeToolTip": "Client.Domain\\ValueObject\\Email.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T02:28:36.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PhoneNumber.cs",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Domain\\ValueObject\\PhoneNumber.cs",
+              "RelativeDocumentMoniker": "Client.Domain\\ValueObject\\PhoneNumber.cs",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Domain\\ValueObject\\PhoneNumber.cs",
+              "RelativeToolTip": "Client.Domain\\ValueObject\\PhoneNumber.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T06:00:35.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClientRepository.cs",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Infrastructure\\Repositories\\ClientRepository.cs",
+              "RelativeDocumentMoniker": "Client.Infrastructure\\Repositories\\ClientRepository.cs",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Infrastructure\\Repositories\\ClientRepository.cs",
+              "RelativeToolTip": "Client.Infrastructure\\Repositories\\ClientRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T02:05:59.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IClientRepository.cs",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Infrastructure\\Interfaces\\IClientRepository.cs",
+              "RelativeDocumentMoniker": "Client.Infrastructure\\Interfaces\\IClientRepository.cs",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Infrastructure\\Interfaces\\IClientRepository.cs",
+              "RelativeToolTip": "Client.Infrastructure\\Interfaces\\IClientRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T04:52:13.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ClientRegisteredEvent.cs",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Application\\Commands\\ClientRegisteredEvent.cs",
+              "RelativeDocumentMoniker": "Client.Application\\Commands\\ClientRegisteredEvent.cs",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Application\\Commands\\ClientRegisteredEvent.cs",
+              "RelativeToolTip": "Client.Application\\Commands\\ClientRegisteredEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T04:27:54.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ClaimsPrincipalExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Api\\Extension\\ClaimsPrincipalExtensions.cs",
+              "RelativeDocumentMoniker": "Client.Api\\Extension\\ClaimsPrincipalExtensions.cs",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Api\\Extension\\ClaimsPrincipalExtensions.cs",
+              "RelativeToolTip": "Client.Api\\Extension\\ClaimsPrincipalExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T05:39:27.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ClientDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Infrastructure\\Data\\ClientDbContext.cs",
+              "RelativeDocumentMoniker": "Client.Infrastructure\\Data\\ClientDbContext.cs",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Infrastructure\\Data\\ClientDbContext.cs",
+              "RelativeToolTip": "Client.Infrastructure\\Data\\ClientDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T04:57:52.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RegisterClient.cs",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Application\\Commands\\RegisterClient.cs",
+              "RelativeDocumentMoniker": "Client.Application\\Commands\\RegisterClient.cs",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Application\\Commands\\RegisterClient.cs",
+              "RelativeToolTip": "Client.Application\\Commands\\RegisterClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T02:04:55.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Client.Infrastructure",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Infrastructure\\Client.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "Client.Infrastructure\\Client.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Infrastructure\\Client.Infrastructure.csproj",
+              "RelativeToolTip": "Client.Infrastructure\\Client.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-07T02:11:57.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Client.Domain",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Domain\\Client.Domain.csproj",
+              "RelativeDocumentMoniker": "Client.Domain\\Client.Domain.csproj",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Domain\\Client.Domain.csproj",
+              "RelativeToolTip": "Client.Domain\\Client.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-07T02:43:34.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Domain\\Entities\\Client.cs",
+              "RelativeDocumentMoniker": "Client.Domain\\Entities\\Client.cs",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Domain\\Entities\\Client.cs",
+              "RelativeToolTip": "Client.Domain\\Entities\\Client.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA0wBEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T02:04:27.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Client.Application",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Application\\Client.Application.csproj",
+              "RelativeDocumentMoniker": "Client.Application\\Client.Application.csproj",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Application\\Client.Application.csproj",
+              "RelativeToolTip": "Client.Application\\Client.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-07T02:11:21.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IRequestHandler.cs",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Application\\Interfaces\\IRequestHandler.cs",
+              "RelativeDocumentMoniker": "Client.Application\\Interfaces\\IRequestHandler.cs",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Application\\Interfaces\\IRequestHandler.cs",
+              "RelativeToolTip": "Client.Application\\Interfaces\\IRequestHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T03:25:55.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Vehicle.cs",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Domain\\Entities\\Vehicle.cs",
+              "RelativeDocumentMoniker": "Client.Domain\\Entities\\Vehicle.cs",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Domain\\Entities\\Vehicle.cs",
+              "RelativeToolTip": "Client.Domain\\Entities\\Vehicle.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAYwBAAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T02:47:33.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Client.Api",
+              "DocumentMoniker": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Api\\Client.Api.csproj",
+              "RelativeDocumentMoniker": "Client.Api\\Client.Api.csproj",
+              "ToolTip": "C:\\Users\\simam\\source\\repos\\ClientServiceEcoWash\\Client.Api\\Client.Api.csproj",
+              "RelativeToolTip": "Client.Api\\Client.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-07T02:14:43.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:141:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:142:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:143:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:144:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:145:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:146:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:147:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:148:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:149:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:150:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:152:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:153:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:154:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:155:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:156:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:157:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:158:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:159:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:160:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:161:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:162:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:163:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:164:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:165:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:166:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:167:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:168:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:169:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:170:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:171:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:172:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:173:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:174:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:175:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:176:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:177:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:178:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:179:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:180:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:181:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:182:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:183:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:184:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:185:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:193:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:196:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:201:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:203:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:198:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
