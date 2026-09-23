@@ -5,87 +5,130 @@ using System.Text;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Client.Infrastructure.Messaging
 {
-    public class RabbitMqEventPublisher : IEventPublisher, IDisposable
+    public class RabbitMqEventPublisher : IEventPublisher
     {
         private readonly IConnection _connection;
 
         public RabbitMqEventPublisher(IConnection connection)
         {
-            _connection = connection;
+            _connection = connection
+                ?? throw new ArgumentNullException(nameof(connection));
         }
 
-        // Implement the interface method
-        public Task PublishAsync(object @event, CancellationToken ct)
+        public async Task PublishAsync(
+            object @event,
+            CancellationToken ct)
         {
-            if (@event == null) throw new ArgumentNullException(nameof(@event));
+            if (@event == null)
+            {
+                throw new ArgumentNullException(nameof(@event));
+            }
 
             var exchange = ResolveExchange(@event.GetType());
 
-            using var channel = _connection.CreateModel();
-            channel.ExchangeDeclare(exchange: exchange, type: ExchangeType.Fanout, durable: true);
+            await using var channel =
+                await _connection.CreateChannelAsync(
+                    cancellationToken: ct);
 
-            var json = JsonSerializer.Serialize(@event, @event.GetType());
+            await channel.ExchangeDeclareAsync(
+                exchange: exchange,
+                type: ExchangeType.Fanout,
+                durable: true,
+                cancellationToken: ct);
+
+            var json = JsonSerializer.Serialize(
+                @event,
+                @event.GetType());
+
             var body = Encoding.UTF8.GetBytes(json);
 
-            var props = channel.CreateBasicProperties();
-            props.Persistent = true;
-            props.ContentType = "application/json";
-            props.Type = @event.GetType().Name; // lets consumers dispatch by event type
+            var properties = new BasicProperties
+            {
+                Persistent = true,
+                ContentType = "application/json",
+                Type = @event.GetType().Name
+            };
 
-            channel.BasicPublish(
+            await channel.BasicPublishAsync(
                 exchange: exchange,
-                routingKey: string.Empty, // fanout: routing key is ignored
-                basicProperties: props,
-                body: body);
-
-            return Task.CompletedTask;
+                routingKey: string.Empty,
+                mandatory: false,
+                basicProperties: properties,
+                body: body,
+                cancellationToken: ct);
         }
 
-        // Keep the existing generic method (optional reuse)
-        public Task PublishAsync<T>(T domainEvent, CancellationToken ct)
+        public async Task PublishAsync<T>(
+            T domainEvent,
+            CancellationToken ct)
         {
+            if (domainEvent == null)
+            {
+                throw new ArgumentNullException(nameof(domainEvent));
+            }
+
             var exchange = ResolveExchange<T>();
 
-            using var channel = _connection.CreateModel();
-            channel.ExchangeDeclare(exchange: exchange, type: ExchangeType.Fanout, durable: true);
+            await using var channel =
+                await _connection.CreateChannelAsync(
+                    cancellationToken: ct);
+
+            await channel.ExchangeDeclareAsync(
+                exchange: exchange,
+                type: ExchangeType.Fanout,
+                durable: true,
+                cancellationToken: ct);
 
             var json = JsonSerializer.Serialize(domainEvent);
+
             var body = Encoding.UTF8.GetBytes(json);
 
-            var props = channel.CreateBasicProperties();
-            props.Persistent = true;
-            props.ContentType = "application/json";
-            props.Type = typeof(T).Name; // lets consumers dispatch by event type
+            var properties = new BasicProperties
+            {
+                Persistent = true,
+                ContentType = "application/json",
+                Type = typeof(T).Name
+            };
 
-            channel.BasicPublish(
+            await channel.BasicPublishAsync(
                 exchange: exchange,
-                routingKey: string.Empty, // fanout: routing key is ignored
-                basicProperties: props,
-                body: body);
-
-            return Task.CompletedTask;
+                routingKey: string.Empty,
+                mandatory: false,
+                basicProperties: properties,
+                body: body,
+                cancellationToken: ct);
         }
 
-        // New overload that resolves by runtime Type
-        private static string ResolveExchange(Type type) => type.Name switch
+        private static string ResolveExchange(Type eventType)
         {
-            "WashRequestedEvent" => "wash-requests",
-            "ClientRegisteredEvent" => "client-lifecycle",
-            _ => throw new InvalidOperationException(
-                $"No exchange mapped for event type {type.Name}. Add it to ResolveExchange.")
-        };
+            return eventType.Name switch
+            {
+                "WashRequestedEvent" => "wash-requests",
 
-        private static string ResolveExchange<T>() => typeof(T).Name switch
+                "ClientRegisteredEvent" =>  "client-lifecycle",
+
+                _ => throw new InvalidOperationException( $"No RabbitMQ exchange is mapped for event type " + $"'{eventType.Name}'. Add it to ResolveExchange.")
+            };
+        }
+
+        private static string ResolveExchange<T>()
         {
-            "WashRequestedEvent" => "wash-requests",
-            "ClientRegisteredEvent" => "client-lifecycle",
-            _ => throw new InvalidOperationException(
-                $"No exchange mapped for event type {typeof(T).Name}. Add it to ResolveExchange.")
-        };
+            return typeof(T).Name switch
+            {
+                "WashRequestedEvent" =>
+                    "wash-requests",
 
-        public void Dispose() => _connection?.Dispose();
+                "ClientRegisteredEvent" =>
+                    "client-lifecycle",
+
+                _ => throw new InvalidOperationException(
+                    $"No RabbitMQ exchange is mapped for event type " +
+                    $"'{typeof(T).Name}'. Add it to ResolveExchange.")
+            };
+        }
     }
 }
