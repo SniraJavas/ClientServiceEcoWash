@@ -3,6 +3,9 @@ using Client.Infrastructure;
 using Client.Infrastructure.Messaging;
 using Client.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Client.Infrastructure.Messaging;
+using Client.Infrastructure.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,8 +16,7 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<IEventPublisher, RabbitMqEventPublisher>();
-builder.Services.AddDbContext<ClientDbContext>(opt =>
-    opt.UseNpgsql(builder.Configuration.GetConnectionString("ClientDb")));
+builder.Services.AddDbContext<ClientDbContext>();
 
 builder.Services.AddAuthorization(options =>
 {
