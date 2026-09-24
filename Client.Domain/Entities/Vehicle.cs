@@ -3,6 +3,9 @@
     public class Vehicle
     {
         public Guid Id { get; private set; }
+
+        public Guid ClientId { get; private set; }
+
         public string Make { get; private set; }
         public string Model { get; private set; }
         public string Plate { get; private set; }
@@ -27,5 +30,7 @@
                 Type = type
             };
         }
+        internal void AssignToClient(Guid clientId) => ClientId = clientId;
+
     }
 }

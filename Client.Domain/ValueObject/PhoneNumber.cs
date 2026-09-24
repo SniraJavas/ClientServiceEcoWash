@@ -2,6 +2,11 @@
 {
     public class PhoneNumber
     {       
-        public PhoneNumber(string Phone) { }
+        public string Value { get; }
+
+        public PhoneNumber(string value)
+        {
+            Value = value ?? string.Empty;
+        }
     }
 }
