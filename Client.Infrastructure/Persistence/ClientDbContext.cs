@@ -1,8 +1,11 @@
-﻿using Client.Domain.Entities;
-using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
+using Client.Domain.Entities;
+
+using ClientEntity = Client.Domain.Entities.Client;
+using ClientBookingSummaryEntity = Client.Domain.Entities.ClientBookingSummary;
 
 namespace Client.Infrastructure.Persistence
 {
@@ -10,8 +13,8 @@ namespace Client.Infrastructure.Persistence
     {
         public ClientDbContext(DbContextOptions<ClientDbContext> options) : base(options) { }
 
-        public DbSet<global::Client.Domain.Entities.Client> Clients => Set<global::Client.Domain.Entities.Client>();
-        public DbSet<global::Client.Domain.Entities.ClientBookingSummary> BookingHistory => Set<global::Client.Domain.Entities.ClientBookingSummary>();
+        public DbSet<ClientEntity> Clients => Set<ClientEntity>();
+        public DbSet<ClientBookingSummaryEntity> BookingHistory => Set<ClientBookingSummaryEntity>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
