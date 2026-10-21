@@ -1,6 +1,5 @@
 using Client.Application.Interfaces;
 using Client.Infrastructure.Messaging;
-using Client.Infrastructure.Persistence;
 using Client.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -15,7 +14,7 @@ builder.Services.AddOpenApi();
 
 // --- Persistence ---
 // ClientDbContext must live in Client.Infrastructure.Persistence (see note below).
-builder.Services.AddDbContext<ClientDbContext>(opt =>
+builder.Services.AddDbContext<Client.Infrastructure.Persistence.ClientDbContext>(opt =>
     opt.UseNpgsql(builder.Configuration.GetConnectionString("ClientDb")));
 
 builder.Services.AddScoped<IClientRepository, ClientRepository>();

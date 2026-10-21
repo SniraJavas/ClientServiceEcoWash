@@ -9,9 +9,9 @@ namespace Client.Infrastructure.Repositories
 {
     public class ClientRepository : IClientRepository
     {
-        private readonly ClientDbContext _db;
+        private readonly Infrastructure.Persistence.ClientDbContext _db;
 
-        public ClientRepository(ClientDbContext db)
+        public ClientRepository(Infrastructure.Persistence.ClientDbContext db)
         {
             _db = db ?? throw new ArgumentNullException(nameof(db));
         }
