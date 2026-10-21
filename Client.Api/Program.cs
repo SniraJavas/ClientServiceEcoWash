@@ -1,33 +1,51 @@
 using Client.Application.Interfaces;
-using Client.Infrastructure;
 using Client.Infrastructure.Messaging;
 using Client.Infrastructure.Persistence;
 using Client.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using RabbitMQ.Client;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
-
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-builder.Services.AddScoped<IClientRepository, ClientRepository>();
-builder.Services.AddSingleton<IEventPublisher, RabbitMqEventPublisher>(); // holds a live RabbitMQ connection — must be Singleton
-
-builder.Services.AddDbContext<Client.Infrastructure.Persistence.ClientDbContext>(opt =>
+// --- Persistence ---
+// ClientDbContext must live in Client.Infrastructure.Persistence (see note below).
+builder.Services.AddDbContext<ClientDbContext>(opt =>
     opt.UseNpgsql(builder.Configuration.GetConnectionString("ClientDb")));
 
+builder.Services.AddScoped<IClientRepository, ClientRepository>();
+
+// --- RabbitMQ ---
+// The publisher needs an IConnection, so register that first (RabbitMQ.Client 7.x API).
+builder.Services.AddSingleton<IConnection>(_ =>
+{
+    var cfg = builder.Configuration;
+    var factory = new ConnectionFactory
+    {
+        HostName = cfg["RabbitMq:Host"] ?? "localhost",
+        Port = int.Parse(cfg["RabbitMq:Port"] ?? "5672"),
+        UserName = cfg["RabbitMq:Username"] ?? "guest",
+        Password = cfg["RabbitMq:Password"] ?? "guest"
+    };
+
+    // On RabbitMQ.Client 6.x use: return factory.CreateConnection();
+    return factory.CreateConnectionAsync().GetAwaiter().GetResult();
+});
+
+builder.Services.AddSingleton<IEventPublisher, RabbitMqEventPublisher>(); // holds a live connection, must be Singleton
+
+// --- Auth ---
 // Client.Api re-checks the token itself, even though Ocelot already validated it at the gateway.
-// This is what actually populates User.Claims so the policies below have something to check.
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
-        options.Authority = builder.Configuration["Identity:Authority"]; // e.g. https://identity-service
-        options.Audience = builder.Configuration["Identity:Audience"];   // e.g. "client"
+        options.Authority = builder.Configuration["Identity:Authority"];
+        options.Audience = builder.Configuration["Identity:Audience"];
     });
 
 builder.Services.AddAuthorization(options =>
@@ -38,16 +56,17 @@ builder.Services.AddAuthorization(options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
     app.MapScalarApiReference(); // browsable UI at /scalar/v1
 }
+else
+{
+    app.UseHttpsRedirection();
+}
 
-app.UseHttpsRedirection();
-
-app.UseAuthentication(); // must run before UseAuthorization, and was missing entirely
+app.UseAuthentication(); // must run before UseAuthorization
 app.UseAuthorization();
 
 app.MapControllers();

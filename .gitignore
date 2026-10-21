@@ -2,11 +2,18 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs
+/.vs/ClientService/CopilotIndices/18.9.1329.3188
+/Client.Api/bin/Release/net10.0
+/Client.Api/obj/Debug/net10.0
+/Client.Api/obj/Release/net10.0
 /Client.Api/obj
+/Client.Application/bin/Release/net10.0
+/Client.Application/obj/Debug/net10.0
+/Client.Application/obj/Release/net10.0
 /Client.Application/obj
+/Client.Domain/obj/Debug/net10.0
 /Client.Domain/obj
-/Client.Api/bin/Debug/net10.0
-/Client.Application/bin/Debug/net10.0
-/Client.Domain/bin/Debug/net10.0
-/Client.Infrastructure/bin/Debug/net10.0
+/Client.Infrastructure/bin/Release/net10.0
+/.vs
+/Client.Infrastructure/obj/Release/net10.0
+/Client.Domain/bin/Release/net10.0
