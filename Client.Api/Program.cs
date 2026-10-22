@@ -10,7 +10,20 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
-builder.Services.AddOpenApi();
+builder.Services.AddOpenApi("v1", options =>
+{
+    options.AddDocumentTransformer<Client.Api.OpenApi.BearerSecurityTransformer>();
+    options.AddDocumentTransformer((doc, ctx, ct) =>
+    {
+        doc.Info = new()
+        {
+            Title = "Client API",
+            Version = "v1",
+            Description = "Client service endpoints"
+        };
+        return Task.CompletedTask;
+    });
+});
 
 // --- Persistence ---
 // ClientDbContext must live in Client.Infrastructure.Persistence (see note below).
@@ -55,10 +68,15 @@ builder.Services.AddAuthorization(options =>
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+if (app.Configuration.GetValue<bool>("OpenApi:Enabled"))
 {
-    app.MapOpenApi();
-    app.MapScalarApiReference(); // browsable UI at /scalar/v1
+    app.MapOpenApi();                          // JSON at /openapi/v1.json
+    app.MapScalarApiReference();               // optional, keep if you like it
+    app.UseSwaggerUI(o =>
+    {
+        o.SwaggerEndpoint("/openapi/v1.json", "Client API v1");
+        o.RoutePrefix = "swagger";             // UI at /swagger
+    });
 }
 else
 {
