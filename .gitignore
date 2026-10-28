@@ -11,3 +11,5 @@
 /Client.Application/obj
 /Client.Domain/obj
 /Client.Infrastructure/bin/Release/net10.0
+/Client.Api/bin/Debug/net10.0
+/Client.Application/bin/Debug/net10.0
