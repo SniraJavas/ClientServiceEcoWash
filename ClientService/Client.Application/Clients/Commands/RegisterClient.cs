@@ -3,7 +3,7 @@ using Client.Domain.Rules;
 using Client.Domain.ValueObject;
 using MediatR;
 
-namespace Client.Application.Commands
+namespace Client.Application.Clients.Commands
 {
     public record RegisterClientCommand(Guid IdentitySubjectId, string FullName, Email Email, PhoneNumber Phone) : IRequest<Guid>;
 
