@@ -1,6 +1,6 @@
 ﻿using Client.Domain.ValueObject;
 
-namespace Client.Application.Commands
+namespace Client.Application.Clients.Commands
 {
     internal class ClientRegisteredEvent
     {

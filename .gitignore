@@ -3,11 +3,6 @@
 ################################################################################
 
 /.vs
-/Client.Api/bin/Release/net10.0
-/Client.Api/obj
-/Client.Domain/bin/Release/net10.0
-/Client.Infrastructure/obj/Release/net10.0
-/Client.Application/bin/Release/net10.0
-/Client.Application/obj
-/Client.Domain/obj
-/Client.Infrastructure/bin/Release/net10.0
+/ClientService/Client.Domain/bin/Debug/net10.0
+/ClientService/Client.Infrastructure/bin/Debug/net10.0
+/ClientService/Client.Infrastructure/obj
