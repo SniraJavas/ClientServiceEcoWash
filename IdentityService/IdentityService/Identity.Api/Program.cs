@@ -5,8 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using static OpenIddict.Abstractions.OpenIddictConstants;
 
 
-using static OpenIddict.Abstractions.OpenIddictConstants;
-
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -63,6 +61,14 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint(
+            "/openapi/v1.json",
+            "IdentityService API v1");
+
+        options.RoutePrefix = "swagger";
+    });
 }
 // ...
 

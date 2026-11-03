@@ -1,0 +1,68 @@
+{
+  "GlobalConfiguration": {
+    "RequestIdKey": "X-Correlation-Id"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/auth/register",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/connect/register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5001 } ]
+    },
+    {
+      "UpstreamPathTemplate": "/auth/login",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/connect/token",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5001 } ]
+    },
+    {
+      "UpstreamPathTemplate": "/auth/verify-email",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/connect/verify-email",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5001 } ]
+    },
+    {
+      "UpstreamPathTemplate": "/api/clients/register",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/clients/register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5002 } ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKeys": [ "ClientAuth" ],
+        "AllowedScopes": [ "complete-profile" ]
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/clients/me/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "DownstreamPathTemplate": "/api/clients/me/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5002 } ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKeys": [ "ClientAuth" ],
+        "AllowedScopes": [ "client" ]
+      }
+    },
+    {
+      "UpstreamPathTemplate": "/api/wash-requests",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/wash-requests",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [ { "Host": "localhost", "Port": 5002 } ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKeys": [ "ClientAuth" ],
+        "AllowedScopes": [ "client" ]
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "1h",
+        "PeriodTimespan": 60,
+        "Limit": 10
+      }
+    }
+  ]
+}

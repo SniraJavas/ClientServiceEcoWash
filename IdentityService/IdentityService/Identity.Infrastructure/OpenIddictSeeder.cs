@@ -17,6 +17,7 @@ namespace Identity.Infrastructure
 
         public async Task StartAsync(CancellationToken ct)
         {
+
             using var scope = _sp.CreateScope();
             await scope.ServiceProvider.GetRequiredService<IdentityServiceDbContext>()
                 .Database.MigrateAsync(ct);   // dev convenience; migrate as a release step in production
