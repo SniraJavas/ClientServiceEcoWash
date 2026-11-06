@@ -10,10 +10,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+builder.Services.AddControllers();
+
 builder.Services.AddDbContext<IdentityServiceDbContext>(o =>
 {
-    o.UseNpgsql(builder.Configuration.GetConnectionString("IdentityDb"));
-    o.UseOpenIddict();
+    o.UseNpgsql(builder.Configuration.GetConnectionString("IdentityDb"))
+     .UseSnakeCaseNamingConvention();     // <- the added line
+    o.UseOpenIddict();                    // leave this exactly where it is
 });
 
 builder.Services.AddIdentity<AppUser, IdentityRole<Guid>>(o =>

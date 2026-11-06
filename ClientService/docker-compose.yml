@@ -1,18 +1,41 @@
-# Local infrastructure for the whole EcoWash platform (Postgres + RabbitMQ).
-# Run from this folder:  docker compose up -d
 services:
   postgres:
     image: postgres:16
     container_name: ecowash-postgres
     environment:
       POSTGRES_PASSWORD: postgres
-    ports: ["5432:5432"]
+    ports:
+      - "5432:5432"
     volumes:
-        - pgdata:/var/lib/postgresql/data
-        - ../database/init/init-databases.sql:/docker-entrypoint-initdb.d/01-init-databases.sql:ro
+      - pgdata:/var/lib/postgresql/data
+      - ../database/init/init-databases.sql:/docker-entrypoint-initdb.d/01-init-databases.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  db-init:
+    image: postgres:16
+    container_name: ecowash-db-init
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      PGHOST: postgres
+      PGPORT: 5432
+      PGPASSWORD: postgres
+    volumes:
+      - ../:/workspace:ro
+    command: ["bash", "/workspace/database/init/apply-all.sh"]
+    restart: "no"
+
   rabbitmq:
     image: rabbitmq:3-management
     container_name: ecowash-rabbitmq
-    ports: ["5672:5672", "15672:15672"]
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
 volumes:
   pgdata:

@@ -19,8 +19,31 @@ namespace Identity.Infrastructure
         {
 
             using var scope = _sp.CreateScope();
-            await scope.ServiceProvider.GetRequiredService<IdentityServiceDbContext>()
-                .Database.MigrateAsync(ct);   // dev convenience; migrate as a release step in production
+
+            var dbContext = scope.ServiceProvider
+                .GetRequiredService<IdentityServiceDbContext>();
+
+            var connection = dbContext.Database.GetDbConnection();
+
+            var builder = new Npgsql.NpgsqlConnectionStringBuilder(
+                connection.ConnectionString);
+
+            //Console.WriteLine("========== ECOWASH DATABASE DEBUG ==========");
+            //Console.WriteLine($"Database: {builder.Database}");
+            //Console.WriteLine($"Host: {builder.Host}");
+            //Console.WriteLine($"Port: {builder.Port}");
+            //Console.WriteLine($"Username: {builder.Username}");
+            //Console.WriteLine($"Password: {builder.Password}");
+            //Console.WriteLine("============================================");
+
+            await dbContext.Database.OpenConnectionAsync(ct);
+
+            Console.WriteLine("PostgreSQL connection successful!");
+
+            await dbContext.Database.CloseConnectionAsync();
+
+
+            //await dbContext.Database.MigrateAsync(ct);
 
             var apps = scope.ServiceProvider.GetRequiredService<IOpenIddictApplicationManager>();
             if (await apps.FindByClientIdAsync("client-app", ct) is not null) return;
